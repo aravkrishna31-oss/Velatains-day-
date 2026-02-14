@@ -1,0 +1,78 @@
+<!DOCTYPE html><html>
+<head>
+<title>Happy Valentine’s Day ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  text-align:center;
+  color:white;
+  background: linear-gradient(135deg,#ff4e8a,#ff9ecb);
+  overflow:hidden;
+}
+
+.card {
+  margin:60px 20px;
+  background: rgba(255,255,255,0.18);
+  padding:30px;
+  border-radius:20px;
+  backdrop-filter: blur(10px);
+}
+
+img {
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid white;
+}
+
+button {
+  background:white;
+  color:#ff4e8a;
+  border:none;
+  padding:12px 22px;
+  border-radius:25px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* floating hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size:20px;
+  animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+    opacity:0;
+  }
+}
+</style></head><body><!-- Background Music --><audio autoplay loop>
+  <source src="YOUR_MUSIC_LINK.mp3" type="audio/mpeg">
+</audio><div class="card">
+  <h1>Happy Valentine’s Day 💖</h1>  <!-- Girlfriend Photo -->  <img src="https://i.postimg.cc/cJnQNhjg/IMG-20250902-WA0014.jpg">  <h2>For Vavu</h2>  <p>
+    You make my days brighter and my smile bigger.<br>
+    Always stay happy 🌸
+  </p><button onclick="showMsg()">Open Message 💌</button>
+
+</div><script>
+function showMsg(){
+  alert("You are truly special ❤️");
+}
+
+/* create floating hearts */
+setInterval(()=>{
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤️";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(4+Math.random()*3)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),7000);
+},500);
+</script></body>
+  </html>
